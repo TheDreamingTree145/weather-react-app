@@ -6,10 +6,10 @@ class SearchForm extends Component {
   render() {
     return (
       <Container >
-        <Form>
+        <Form onSubmit={this.props.handleOnSubmit}>
           <Form.Field>
             <label>Search for a City</label>
-            <input type='text' />
+            <input type='text' value={this.props.search_term} onChange={this.props.handleOnChange}/>
           </Form.Field>
           <Button type='submit'>Search</Button>
         </Form>
